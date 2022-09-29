@@ -35,7 +35,7 @@ class NotesService {
     return result.rows.map(mapDBToModel);
   }
 
-  async getNotesById(id) {
+  async getNoteById(id) {
     const query = {
       text: 'SELECT * FROM notes WHERE id = $1',
       values: [id],
